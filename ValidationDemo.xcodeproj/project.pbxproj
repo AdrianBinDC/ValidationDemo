@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5560F9F5249498C700B7E0C9 /* CreditCardUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560F9F4249498C700B7E0C9 /* CreditCardUtilityTests.swift */; };
 		5589FD7D249485BA00D87E9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5589FD7C249485BA00D87E9B /* AppDelegate.swift */; };
 		5589FD7F249485BA00D87E9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5589FD7E249485BA00D87E9B /* SceneDelegate.swift */; };
 		5589FD81249485BA00D87E9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5589FD80249485BA00D87E9B /* ViewController.swift */; };
@@ -14,6 +15,10 @@
 		5589FD86249485BC00D87E9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5589FD85249485BC00D87E9B /* Assets.xcassets */; };
 		5589FD89249485BC00D87E9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5589FD87249485BC00D87E9B /* LaunchScreen.storyboard */; };
 		5589FD94249485BD00D87E9B /* ValidationDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5589FD93249485BD00D87E9B /* ValidationDemoTests.swift */; };
+		5589FD9F249488C400D87E9B /* CreditCardUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5589FD9E249488C400D87E9B /* CreditCardUtility.swift */; };
+		55C994F6249553740037976F /* card-amex.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C994F5249553740037976F /* card-amex.png */; };
+		55C994FA249553BB0037976F /* card-mastercard.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C994F9249553BB0037976F /* card-mastercard.png */; };
+		55C994FC249555310037976F /* card-visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C994FB249555310037976F /* card-visa.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5560F9F4249498C700B7E0C9 /* CreditCardUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardUtilityTests.swift; sourceTree = "<group>"; };
 		5589FD79249485BA00D87E9B /* ValidationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValidationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5589FD7C249485BA00D87E9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5589FD7E249485BA00D87E9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +44,10 @@
 		5589FD8F249485BD00D87E9B /* ValidationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValidationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5589FD93249485BD00D87E9B /* ValidationDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationDemoTests.swift; sourceTree = "<group>"; };
 		5589FD95249485BD00D87E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5589FD9E249488C400D87E9B /* CreditCardUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardUtility.swift; sourceTree = SOURCE_ROOT; };
+		55C994F5249553740037976F /* card-amex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card-amex.png"; sourceTree = "<group>"; };
+		55C994F9249553BB0037976F /* card-mastercard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card-mastercard.png"; sourceTree = "<group>"; };
+		55C994FB249555310037976F /* card-visa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card-visa.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +89,11 @@
 		5589FD7B249485BA00D87E9B /* ValidationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				55C994F42495536A0037976F /* Images */,
 				5589FD7C249485BA00D87E9B /* AppDelegate.swift */,
 				5589FD7E249485BA00D87E9B /* SceneDelegate.swift */,
 				5589FD80249485BA00D87E9B /* ViewController.swift */,
+				5589FD9E249488C400D87E9B /* CreditCardUtility.swift */,
 				5589FD82249485BA00D87E9B /* Main.storyboard */,
 				5589FD85249485BC00D87E9B /* Assets.xcassets */,
 				5589FD87249485BC00D87E9B /* LaunchScreen.storyboard */,
@@ -94,9 +106,20 @@
 			isa = PBXGroup;
 			children = (
 				5589FD93249485BD00D87E9B /* ValidationDemoTests.swift */,
+				5560F9F4249498C700B7E0C9 /* CreditCardUtilityTests.swift */,
 				5589FD95249485BD00D87E9B /* Info.plist */,
 			);
 			path = ValidationDemoTests;
+			sourceTree = "<group>";
+		};
+		55C994F42495536A0037976F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				55C994F5249553740037976F /* card-amex.png */,
+				55C994F9249553BB0037976F /* card-mastercard.png */,
+				55C994FB249555310037976F /* card-visa.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,8 +203,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C994F6249553740037976F /* card-amex.png in Resources */,
 				5589FD89249485BC00D87E9B /* LaunchScreen.storyboard in Resources */,
+				55C994FC249555310037976F /* card-visa.png in Resources */,
 				5589FD86249485BC00D87E9B /* Assets.xcassets in Resources */,
+				55C994FA249553BB0037976F /* card-mastercard.png in Resources */,
 				5589FD84249485BA00D87E9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +229,7 @@
 				5589FD81249485BA00D87E9B /* ViewController.swift in Sources */,
 				5589FD7D249485BA00D87E9B /* AppDelegate.swift in Sources */,
 				5589FD7F249485BA00D87E9B /* SceneDelegate.swift in Sources */,
+				5589FD9F249488C400D87E9B /* CreditCardUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5589FD94249485BD00D87E9B /* ValidationDemoTests.swift in Sources */,
+				5560F9F5249498C700B7E0C9 /* CreditCardUtilityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
