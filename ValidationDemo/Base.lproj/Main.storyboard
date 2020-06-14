@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wbb-6i-bdR">
-                                <rect key="frame" x="20" y="44" width="374" height="34"/>
+                                <rect key="frame" x="20" y="64" width="374" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Credit Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mbx-hT-tX0">
                                         <rect key="frame" x="0.0" y="0.0" width="332" height="34"/>
@@ -35,16 +35,18 @@
                                     <constraint firstAttribute="height" constant="34" id="TBm-58-lw6"/>
                                 </constraints>
                             </stackView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C9v-3t-OJm">
-                                <rect key="frame" x="0.0" y="86" width="414" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9v-3t-OJm">
+                                <rect key="frame" x="0.0" y="106" width="414" height="216"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wbb-6i-bdR" secondAttribute="trailing" constant="20" id="CNG-kw-cfl"/>
-                            <constraint firstItem="Wbb-6i-bdR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fQu-YU-iop"/>
+                            <constraint firstItem="C9v-3t-OJm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UDO-iV-azb"/>
+                            <constraint firstItem="Wbb-6i-bdR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="fQu-YU-iop"/>
+                            <constraint firstItem="C9v-3t-OJm" firstAttribute="top" secondItem="Wbb-6i-bdR" secondAttribute="bottom" constant="8" id="ocy-hX-VfW"/>
                             <constraint firstItem="Wbb-6i-bdR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uF5-ae-fHj"/>
+                            <constraint firstItem="C9v-3t-OJm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uxx-3F-mmN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
