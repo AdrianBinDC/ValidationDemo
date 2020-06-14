@@ -19,14 +19,21 @@ class ViewController: UIViewController {
         let cardNumberString: String
     }
     
-    /* This is more appropriate in a view model, but for the sake of simplicity doing MVC */
-    /* This is a lazy declaration, so it fires when it's needed, not before. */
+    /* This is more appropriate in a view model, but for the sake of simplicity doing MVC
+     
+     This is a lazy declaration, so it fires when it's needed, not before.
+     
+     An argument could be made for a dictionary, but I prefer this declaration because it preserves order.
+     If order doesn't matter, a dictionary would be prefereable because it's faster.
+     */
+    
     private lazy var pickerElements: [PickerElement] = {
         /*
          Enable code folding in Xcode. While this declaration appears verbose, you can collapse it.
          Easy to read = easy to debug.
          */
         let fieldNames = [
+            "Select A Card",
             "American Express",
             "Mastercard",
             "Visa",
@@ -42,6 +49,7 @@ class ViewController: UIViewController {
         ]
         
         var cardNumbers = [
+            "",
             "343047786517463",
             "5127179035326007",
             "4425218577312280",
@@ -78,6 +86,8 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Configuration Methods
+    // When you set up a textfield, resist the urge to customize it on the storyboard.
+    // Doing it in code is much easier.
     func setupTextFields() {
         textField.delegate = self // not implementing any of them, but putting this here in case you decide to
         textField.addTarget(self,
@@ -111,6 +121,7 @@ class ViewController: UIViewController {
         imageView.setNeedsDisplay()
     }
     
+    // This will be fired when running the app on a device, but not when you directly set the textField text in simulator.
     @objc func textFieldDidChange(_ textField: UITextField) {
         updateTextField()
     }
@@ -121,6 +132,10 @@ class ViewController: UIViewController {
 // MARK: - UITextFieldDelegate Methods
 extension ViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        /*
+         NOTE: If you've got multiple textFields, you can switch on textField and customize behavior for each textField on your view
+         */
+        
         // This restricts the textField to just numbers
         let allowedCharacters = CharacterSet.decimalDigits
         let characterSet = CharacterSet(charactersIn: string)
